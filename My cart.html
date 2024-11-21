@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function(){
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos){
+                document.getElementById("navbar").style.top = "0";
+            } else{
+                document.getElementById("navbar").style.top = "-60px";
+            }
+            prevScrollpos = currentScrollPos;
+            }
+            
+        </script>
+</head>
+<body>
+    <div id="navbar">
+        <p id="title">SHRED</p>
+        <a href="index.html">Home</a>
+        <a href="About us.html">About us</a>
+      <a href="Shredders.html">Paper Shredders</a>
+      <a href="Contacts.html">Contacts</a>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+<h1>In progress</h1>
+
+</body>
+</html>
+<style>
+    #navbar {
+  background-color: #333;
+    position: fixed;
+    top: 0;
+    height: 48.3px;
+    width: 100%; /* Ensures the navbar stretches across the entire width */
+    transition: top 1s;
+    opacity: 90%;
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Center items vertically */
+    padding: 0 15px; /* Add padding to adjust spacing around the content */
+    box-sizing: border-box; /* Ensures padding is included in the element's width */
+}
+html, body{
+  margin: 0;
+  padding: 0;
+}
+#navbar a {
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+}
+  
+  #navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  #title{
+    color: white;
+    padding-left: 35px;
+    display: block;
+    font-style: italic;
+    font-family: fantasy;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 0.0001px;
+  }
+  body{
+  background-image: linear-gradient(to bottom right, #a2a2bd, #e0feff);
+}
+</style>
+</style>

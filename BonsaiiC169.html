@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function(){
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos){
+                document.getElementById("navbar").style.top = "0";
+            } else{
+                document.getElementById("navbar").style.top = "-60px";
+            }
+            prevScrollpos = currentScrollPos;
+            }
+        function updatequantity(){
+          var amount = document.getElementById("amount").value|| 1;
+          document.querySelector(".quant").innerHTML = amount ? amount : "1";
+          price = document.getElementById("sell2").textContent.replace(/[^0-9]/g, '');
+          price = parseInt(price);
+          totalprice = amount*1400000
+          document.getElementById("sell2").innerHTML = "Rp. " + totalprice.toLocaleString(); 
+          document.getElementById("currency").innerHTML = ""
+        }
+        </script>
+</head>
+<body>
+    <div id="navbar">
+        <p id="title">SHRED</p>
+        <a href="index.html">Home</a>
+      <a href="About us.html">About us</a>
+      <a href="My cart.html">My cart</a>
+      <a href="Contacts.html">Contacts</a>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="search">
+        <input type="text" placeholder="Search...">
+      </div>
+      <br>
+      <br>
+      <br>
+      <table border="1">
+        <tr>
+            <td rowspan="3" class="pic1"><img src="images/Bonsaii.png" width="245px" height="350px"></td>
+            <td colspan="3" class="name">Bonsaii 15-Sheet Office Paper Shredder, 40 Mins Heavy Duty Shredder for Home Office, Crosscut Shreder with Anti-Jam System & P-4 High Security Supports CD/Credit Cards/Staple,5 Gal Pullout Bin C169-B
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" class="desc"><b>【Paper Shredder for Office Use】</b>Max 15 sheets of paper shredding capacity, Bonsaii crosscut office shredder heavy duty can shreds paper, CDs, credie cards, mails and staples into tiny particles measuring 13/64 x 63/64 inches to ensure the security of personal privacy, is a good helper for your office, small office and home office use.<br>
+              <b>【Shredder for Home Office Heavy Duty】</b>Based on the patented cooling system, the paper shredder for office heavy duty runs continuously for 40 mins without stopping and destroys about 2900 sheets of paper, efficiently completing shredding tasks without worrying about overheating or slowing down.<br>
+              <b>【Jam Proof & Easy Operation】</b>Auto Start/Stop/Reverse functions protect your heavy duty paper shredder from the frustration of paper jams. With upgraded indicator lights, bonsaii home office heavy duty paper shredder is easy to operate, overheating and overload signals help you use paper shredder correctly and prolong its lifetime.<br>
+              <b>【Large Capacity & Clear Window】</b>5 gallons large pull-out bin can easily hold about 350 sheets of paper. The shredders for home use heavy duty also has clear window, making it easy to see when the bin is full of documents for timely cleanup. With 360° swivel casters, you can move it freely to anywhere you want.<br>
+              <b>【Quiet Operation & 1-Year Warranty】</b>The cross cut shredder for home office can easily achieve 60dB low-noise operation, allowing you to focus on what you are doing. Bonsaii provides 1-Year warranty for your business shredder. Tips: We test every shredder before shipping, which means you may see some paper shreds from the testing.<br>
+              <b>【Important Note】</b>Refer to the user manual, troubleshooting guide, and instructional video before use,In order to extend the life, recommended to clean waste baskets and knives regularly to avoid clogging, and to maintain them with oil pack.<br>
+              <b>【40 Mins Cooling Time】</b>If keeps shredding over 40mins may overheat and automatically shut down, the shredder enters the overheat protection, requiring 40mins of cooling before next working.</td>
+        </tr>
+        <tr>
+            <td align="center"><label>Quantity:
+                <input id="amount" list="browsers" name="myBrowser" oninput="updatequantity()"/></label>
+                <datalist id="browsers">
+                  <option value="1">
+                  <option value="2">
+                  <option value="3">
+                  <option value="4">
+                  <option value="5">
+                </datalist></td>
+            <td align="center"><p class="discount1">Rp. 2,000,000 per piece</p><p></p><span id="currency">Rp. </span><span id="sell2">1,400,000</span> for <span class="quant">1</span></td>
+            <td align="center"><button class="cart">Add to cart</button></td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <h1>Recommendations</h1>
+        <table class="products" cellspacing="0" width="100%" align="center">
+            <tr>
+              <td align="center" class="four034"><a href="Dahle4034.html"><img src="images/Dahle print.png" width="175px" height="250px"><p class="dahle">Dahle 4034</p><p class="price4">Rp. 47,400,000</p></a></td>
+                <td align="center" class="MC14"><a href="Royal14MC.html"><img src="images/Royal.png" width="175px" height="250px"><br><p class="royal">Royal 14MC</p><p class="price2">Rp. 2,300,000</p></a></td>
+                <td align="center" class="MA120"><a href="AuroraAu120MA.html"><img src="images/Aurora.png" width="175px" height="250px"><p class="aurora">Aurora Au120 MA</p><p class="price3">Rp. 2,700,000</p></a></td>
+            </tr>
+      </table>
+</body>
+</html>
+<style>
+    #navbar {
+  background-color: #333;
+    position: fixed;
+    top: 0;
+    height: 48.3px;
+    width: 100%; /* Ensures the navbar stretches across the entire width */
+    transition: top 1s;
+    opacity: 90%;
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Center items vertically */
+    padding: 0 15px; /* Add padding to adjust spacing around the content */
+    box-sizing: border-box; /* Ensures padding is included in the element's width */
+}
+html, body{
+  margin: 0;
+  padding: 0;
+}
+#navbar a {
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+}
+  
+  #navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  #title{
+    color: white;
+    padding-left: 35px;
+    display: block;
+    font-style: italic;
+    font-family: fantasy;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 0.0001px;
+  }
+  .search{
+    overflow: hidden;
+    color: black;
+    width: 100%;
+  }
+  .search a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.search a:hover{
+  background-color: #ddd;
+  color: black;
+}
+.search a.active {
+  background-color: #2196F3;
+  color: white;
+}
+.search input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+@media screen and (max-width: 600px) {
+  .search a, .search input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .search input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
+  body{
+  background-image: linear-gradient(to bottom right, #a2a2bd, #e0feff);
+}
+.table{
+    border-style: solid;
+    border-spacing: 0px;
+    padding: 0px;
+}
+.pic1{
+    padding-right: 30px;
+}
+.discount1{
+  font-size: 10px;
+  color: red;
+}
+.discount1{
+    background-color: transparent;
+    background-image: gradient(linear, 19.1% -7.9%, 81% 107.9%, color-stop(0, transparent), color-stop(.48, transparent), color-stop(.5, #000), color-stop(.52, transparent), color-stop(1, transparent));
+    background-image: repeating-linear-gradient(174deg, transparent 0%, transparent 48%, black 50%, transparent 52%, transparent 100%);
+}
+.cart{
+    border-radius: 50px;
+}
+.name{
+    font-weight: bold;
+    font-size: 30px;
+}
+.C169 a:link, .MA120 a:link, .MC14 a:link, .four034 a:link{
+    color: black;
+    text-decoration: none;
+}
+.C169 a:visited, .MA120 a:visited, .MC14 a:visited, .four034 a:visited{
+    color: black;
+    text-decoration: none;
+}
+.bonsaii{
+    font-size: 20px;
+    font-weight: bold;
+}
+.price1{
+    font-size: 18px;
+}
+.royal{
+    font-size: 20px;
+    font-weight: bold;
+}
+.price2{
+    font-size: 18px;
+}
+.aurora{
+    font-size: 20px;
+    font-weight: bold;
+}
+.price3{
+    font-size: 18px;
+}
+.dahle{
+    font-size: 20px;
+    font-weight: bold;
+}
+.price4{
+    font-size: 18px;
+}
+</style>

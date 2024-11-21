@@ -1,0 +1,200 @@
+
+</style><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function(){
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos){
+            document.getElementById("navbar").style.top = "0";
+        } else{
+            document.getElementById("navbar").style.top = "-60px";
+        }
+        prevScrollpos = currentScrollPos;
+        }
+        
+    </script>
+</head>
+<body>
+  <br>
+    <div id="navbar">
+      <p id="title">SHRED</p>
+      <a href="index.html">Home</a>
+      <a href="Shredders.html">Paper Shredders</a>
+      <a href="My cart.html">My cart</a>
+      <a href="Contacts.html">Contacts</a>
+    </div>
+    <div class="container1">
+        <div class="content">
+        <div class="title1">Who we are</div>
+            <div class="text1">At SHRED, we are dedicated to providing secure, reliable, and eco-friendly document disposal solutions through our extensive range of paper shredders. As an online retailer, we serve a wide variety of customers, from individuals safeguarding personal data to corporations managing sensitive information. Our mission goes beyond simply offering products—we provide expert advice, top-notch customer service, and guidance to ensure that secure shredding is accessible and easy for everyone. With a selection of shredders catering to diverse needs, from basic strip-cut models to high-security micro-cut machines, we help you protect your privacy while also supporting sustainability. Our commitment to the environment is reflected in our products, which not only ensure data protection but also make recycling easier, aligning with our vision of reducing paper waste. By choosing SHRED, you join a community that values security, privacy, and environmental responsibility, as we work together toward a safer and greener future.</div>
+        </div>
+        <div class="pic1"><img src="images/about us.jpg" width="540px" height="400px"></div>
+      </div>
+      <div class="container2">
+        <div class="content2">
+        <div class="title2">Vision and mission</div>
+            <div class="text2"><b>Vision</b> <br>To be a global leader in secure and sustainable paper disposal solutions, empowering businesses and individuals to protect their data while contributing to a greener planet. <br><br><b>Mission</b><ul><li>To offer a wide range of reliable and durable paper shredders tailored to the specific needs of our customers.</li><li>To promote environmentally responsible shredding by making our products easy to use and encouraging paper recycling practices.</li><li>To promote environmentally responsible shredding by making our products easy to use and encouraging paper recycling practices.</li><li>To reduce global paper waste by supporting conscious shredding habits and paper decomposition through strategic partnerships and initiatives. </li></ul></div>
+        </div>
+        <div class="pic2"><img src="images/vision and mission.png" width="540px" height="400px"></div>
+      </div>
+      <div class="container3">
+        <div class="content3">
+        <div class="title3">Background</div>
+            <div class="text3">At SHRED, we started with a simple goal: to make document disposal more secure and environmentally responsible. Recognizing the growing need for data protection and sustainable practices, we saw an opportunity to bridge these two essential aspects through paper shredders. With the rise of identity theft and increasing awareness of environmental conservation, shredding documents properly has become more critical than ever. Our journey began with the aim to provide high-quality shredders that meet various security needs while also supporting eco-friendly waste management. Over time, we’ve expanded our offerings to include shredders for home use, businesses, and large corporations, all while ensuring that our products contribute to the ease of recycling paper waste. Our background in customer service and technical expertise allows us to offer not only great products but also valuable advice on choosing the right shredder for your needs, making document disposal simple, secure, and sustainable for everyone.</div>
+        </div>
+        <div class="pic3"><img src="images/background.jpg" width="540px" height="400px"></div>
+      </div>
+      <br><br><br>
+</body>
+</html>
+<style>
+#navbar {
+  background-color: #333;
+    position: fixed;
+    top: 0;
+    height: 48.3px;
+    width: 100%; /* Ensures the navbar stretches across the entire width */
+    transition: top 1s;
+    opacity: 90%;
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Center items vertically */
+    padding: 0 15px; /* Add padding to adjust spacing around the content */
+    box-sizing: border-box; /* Ensures padding is included in the element's width */
+}
+html, body{
+  margin: 0;
+  padding: 0;
+}
+#navbar a {
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+}
+  
+  #navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  #title{
+    color: white;
+    padding-left: 35px;
+    display: block;
+    font-style: italic;
+    font-family: fantasy;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 0.0001px;
+  }
+.container1{
+  justify-content: center;
+  column-gap: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 50px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.title1{
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  width: 400px;
+}
+.text1{
+  color: black;
+  text-align: left;
+  font-size: 20px;
+  width: 560px;
+  height: 355px;
+}
+.pic1{
+  height: 100%;
+}
+.container2{
+  justify-content: center;
+  column-gap: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  margin-top: 100px;
+}
+.content2{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.title2{
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  width: 400px;
+}
+.text2{
+  color: black;
+  text-align: left;
+  font-size: 20px;
+  width: 560px;
+  height: 355px;
+}
+.pic2{
+  height: 100%;
+}
+.container3{
+  justify-content: center;
+  column-gap: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 100px;
+}
+.content3{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.title3{
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  width: 400px;
+}
+.text3{
+  color: black;
+  text-align: left;
+  font-size: 20px;
+  width: 560px;
+  height: 355px;
+}
+.pic3{
+  height: 100%;
+}
+body{
+  background-image: linear-gradient(to bottom right, #a2a2bd, #e0feff);
+}
+.text2{
+  font-size: 19.6px; 
+}
+.text1{
+  font-size: 19.6px; 
+}
+.text3{
+  font-size: 19.6px; 
+}
+.text1, .text2, .text3{
+  background-color: rgba(255, 255, 255, 0.7);
+}
+</style>
